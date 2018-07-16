@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>The Breast Cancer Machine Learning Prediction</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+  </head>
+
+  <style>
+  header{
+
+height: 500px;
+
+position: relative;
+background-image: url("awareness-cancer-design.jpg"); 
+background-attachment: fixed;
+background-position: right center ;
+background-size: cover;
+background-position: bottom ;
+opacity: 0.98;
+filter: alpha(opacity=30);
+
+}
+
+#hd1{
+  color: black;
+  opacity: 0.8;
+  
+}
+
+/* .inline-block {
+   display: inline-block;
+} */
+
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   background:#6cf;
+}
+
+
+  </style>
+
+  <body id="page-top">
+
+      
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <!-- <img src="awareness-cancer-design.jpg" alt="Italian Trulli"> -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">Introduction</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#comparison">Models Comparison</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#predict">Prediction</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="bg-primary text-white" >
+      <div class="container text-center" id = "hd1">
+        <h1>The Breast Cancer Machine Learning Prediction</h1>
+        <p class="lead">Goal: Increasing precision rate of BCa diagnosis</p>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 mx-auto">
+            <h2>About Project</h2>
+            <p class="lead">Breast cancer is a malignant tumor that forms in the cells of the breast. Although mostly found in women, men can get breast cancer too. 
+              There are a number of symptoms associated with breast cancer, but the first noticeable symptom is often a lump or area of thickened breast tissue. 
+              A lump in the breast does not necessarily mean you have cancer - most breast lumps are not cancerous. However, it is always best to have them checked
+              by your doctor. Treatment for breast cancer may include surgery, radiation, chemotherapy, hormone therapy, targeted therapy or bone-directed therapy.</p>
+
+            <p class="lead">Digital Lab applied 6 machine learning models to predict breast cancer and here are our brief introductions and logic we followed to achieved these results:</p>
+            <ul>
+              <li>Models: Support Vector Machine (SVM), Decision Tree (C4.5), Naive Bayes (NB) and k Nearest Neighbors (k-NN), random forest, neural network</li>
+              <li>Team: Irene, Cong, Boren, Mike</li>
+              <li>Technology: Python Keras, scikit-learn, Pandas, Matplotlib | Javascript, HTML, CSS, Bootstrap</li>
+              <li>Project Github Link: <a href="https://github.com/Mikelaifu/Breast_Cancer_ML_Project">Breast Cancer Machine Learning Prediction Project</a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="comparison" class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 mx-auto">
+            <h2>Models Comparison</h2>
+            <h4>Process Projection:</h4>
+            <p class="lead">To increase the accuracy of breast cancer diagnosis, 6 different machine learning techniques are applied with different input patient 
+              features. The selected supervised machine learning techniques have been widely applied in cancer research for the development of predictive model. Every model is 
+              explored individually by parameter adjustment, feature selection and method optimization to maximize its ability. The comparison figure will show the 
+              summary of results from each model and which one is the best! In addition to finding the best model, 
+              features exploration methods ( decision tree, Random forest, Principal component analysis (PCA) ) were performed to visualize how each features could contribute the results of our predoctions.
+            </p>
+            <div class="dropdown show">
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Models 
+              </a>
+            
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#summery">Models Summery</a>
+                <a class="dropdown-item" href="#TreeForest">Tree and Forest</a>
+                <a class="dropdown-item" href="#PCA">Principal component analysis (PCA)</a>
+                <a class="dropdown-item" href="#NN">Neural Network</a>
+                
+              </div>
+            </div>
+
+            <div class = 'models'>
+            <section id="summery">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-12 mx-auto">
+                    <h3>Models Performence Before and After</h3>
+                    <br>
+                    <br>
+                    <div class="dropdown show">
+                      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Models 
+                      </a>
+                    
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#summery">Models Summery</a>
+                        <a class="dropdown-item" href="#TreeForest">Tree and Forest</a>
+                        <a class="dropdown-item" href="#PCA">Principal component analysis (PCA)</a>
+                        <a class="dropdown-item" href="#NN">Neural Network</a>
+                        
+                      </div>
+                    </div>
+                    <br>
+                    <div id="banner" style="overflow: hidden; display: flex; justify-content:space-around;">
+                      <h4>Before Adjustment</h4>
+                      <div class="inline-block">
+                          <img src ="Image/PerformenceBefore(Train).png">
+                      </div>
+                  
+                      <div class="inline-block">
+                          <img src ="Image/PerformenceBefore(test).png">
+                      </div>
+                  </div>
+
+                  <br>
+
+                  <div id="banner" style="overflow: hidden; display: flex; justify-content:space-around;">
+                      <h4>After Adjustment</h4>
+                    <div class="inline-block">
+                        <img src ="Image/PerformenceAfter(train).png">
+                    </div>
+                
+                    <div class="inline-block">
+                        <img src ="Image/PerformenceAfter(test).png">
+                    </div>
+                </div>
+                  <hr>
+                  <p class="lead">Explanation: Before scaling and modifying the parameters, 
+                    the charts visualize the distribution of values and accuracy within each models. 
+                    Support Vector Machine and Neural Network ranged from 47% to 90%. 
+                    After Scaling the data and modifying parameters, each model respectively goes up on average to 94% within their ranges.
+                </p>
+                <p class="lead">Parameters: 
+                <ul>
+                  <li>Decision Tree & Random Forest: max_depth=4, The maximum depth of the tree, used to contraol the depth of tree</li>
+                  <li>SVM: C = 1000, The C parameter tells the SVM optimization how much you want to avoid misclassifying each training example.</li>
+                  <li>KNNeighbor: n_neighbors = 8</li>
+                  <li>Neural Nerwork: hidden_layer_sizes=5, activation='relu',  alpha=0.5,  learning_rate='constant',   max_iter=200</li>
+                  <li>Naive Bayes: Gaussian Naive Bayes model was applied for classification</li>
+
+                </ul>
+                </p>
+                  <p class="lead">Code: <a href="">ModelSummeriesBefore&After</a></p>
+
+                    
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section id="TreeForest">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-12 mx-auto">
+                    <h3>Tree and Forest - Feature Selection</h3>
+                    <br>
+                    <div class="dropdown show">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Models 
+                        </a>
+                      
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item" href="#summery">Models Summery</a>
+                          <a class="dropdown-item" href="#TreeForest">Tree and Forest</a>
+                          <a class="dropdown-item" href="#PCA">Principal component analysis (PCA)</a>
+                          <a class="dropdown-item" href="#NN">Neural Network</a>
+                          
+                        </div>
+                      </div>
+                      <br>
+                      <br>
+                    <div id="banner" style="overflow: hidden; display: flex; justify-content:space-around;">
+                      <div class="inline-block">
+                          <img src ="Image/Feature Weight Selection(Tree).png">
+                      </div>
+                  
+                      <div class="inline-block">
+                          <img src ="Image/Feature Weight Selection(Forest).png">
+                      </div>
+                     
+                  </div>
+                  <br>
+                  <br>
+                  <br>
+                  
+                  <div id="banner" style="overflow: hidden; display: flex; justify-content:space-around;">
+                      <h5><p>Using Random Forst to visualized the prediction accuracy with the numbers of feature used:</p></h5>
+                     
+                      <div class="inline-block">
+                          <img src ="Image/Feature_Selection2.png">
+                      </div>
+                     
+                  </div>
+                  <hr>
+                  <p class="lead">Explanation: In the first two feature selection charts, 
+                    Decision tree displayed less weights than random forest did.
+                  In Decision tree, At each step the algorithm chooses the best result(best weights). 
+                  However, choosing the best result at given step does not ensure you will be headed down the route that will lead to the optimal decision when you make it
+                to the final node of the tree. However, random forest mitigates this problem as a collection of decision Tree whose results are aggegated into one final
+                result. if we have 30 features, random forests will only use a certain number of those features in each model, say five. Unfortunately, we have omitted 25 features that could be useful. 
+                But as stated, a random forest is a collection of decision trees. Thus, in each tree we can utilize five random features.
+                If we use many trees in our forest, eventually many or all of our features will have been included.
+                This inclusion of many features will help limit our error due to bias and error due to variance.  </p>
+                <p><a href = 'https://towardsdatascience.com/decision-trees-and-random-forests-df0c3123f991'>reference article</a></p>
+                <p class="lead">Code: <a href="https://github.com/Mikelaifu/Breast_Cancer_ML_Project/blob/master/Final_Project/DecisonTree%26RFFeatureWeights/Breast%20Cancer%20ML%20%20Modeling%20Decision%20Tree%20%26%20Random%20Forest.ipynb">Tree&Forest</a></p>
+                <p class="lead"> In the feature accuracy Vs number of feature graph, random forest model and scikit-learn RFECV was used here for feature selection.
+                    This is ONE of the many ways of feature selection. Recursive feature elimination is an automated approach to this. 
+                    They have different pros and cons, and usually feature selection is best achieved by also involving common sense and trying models with different features. 
+                    RFE is a quick way of selecting a good set of features, but does not necessarily give you the ultimately best.
+                    However, because we used random forest tree (collections of decision tree), a more straight-forward and brutal method to weight features. 
+                    So, everytime the feature accuracy Vs number of feature graph was run, system will return to different result(optimal points) and visualization. (refer to code below)
+
+                  </p>
+                  <p class="lead">Code: <a href="https://github.com/Mikelaifu/Breast_Cancer_ML_Project/blob/master/Final_Project/Feature%20AccuracyVS%20Number%20of%20Features/Accuracy%20Vs%20number%20of%20Features.ipynb">feature accuracy & number of feature</a></p>
+                  <br>
+                  <br>
+                  <br>
+                  <p class="lead">Next, Based on PCA (Principal Compotent Analysis) was used to differentiate benign vs malignant, 
+                    feature weights was calculated and visualized from each feature's contribution</p>
+                    
+                </div>
+              </div>
+            </section>
+
+            <section id="PCA">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                      <h3>PCA Analysis - Feature Selection</h3>
+                      <br>
+                      <div class="dropdown show">
+                          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Models 
+                          </a>
+                        
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#summery">Models Summery</a>
+                            <a class="dropdown-item" href="#TreeForest">Tree and Forest</a>
+                            <a class="dropdown-item" href="#PCA">Principal component analysis (PCA)</a>
+                            <a class="dropdown-item" href="#NN">Neural Network</a>
+                            
+                          </div>
+                        </div>
+                        <br>
+                        <br>
+                      <div id="banner" style="overflow: hidden; display: flex; justify-content:space-around;">
+                        <div class="inline-block">
+                            <img src ="Image/PCA.png" height="400" width="400">
+                        </div>
+                    
+                        <div class="inline-block">
+                            <img src ="Image/scree.png" height="400" width="400">
+                        </div>
+                       
+                    </div>
+                    <br>
+                    <div id="banner" style="overflow: hidden; display: flex; justify-content:space-around;">
+                       
+                        <div class="inline-block">
+                            <img src ="Image/loading.png" height="400" width="400">
+                        </div>
+                    
+                        <div class="inline-block">
+                            <img src ="Image/SVMperformance.png" height="400" width="400">
+                        </div>
+                       
+                    </div>
+                    <hr>
+                    <p class="lead">Explaination: PCA (Principal component analysis) method, the main linear technique for dimensionality reduction, was used to visualize our data. 
+                      From the PCA plot and scree plot we found that princple component 1 showed most variation between patient (malignant) and control (benign) group. 
+                      Then the loading scores of 30 features from PC1 were sorted and visualized, which showed all features by order of their weight in PC1. 
+                      Last, SVM model performance was visualized (on train and test data) while more features added into the model. </p>
+                    <p class="lead">Code: <a href="https://github.com/Mikelaifu/Breast_Cancer_ML_Project/blob/master/Final_Project/PCA/PCA_Feature_selection.ipynb">PCA analysis</a></p>
+                      
+                  </div>
+  
+                </div>
+              </section>
+
+            <section id="NN">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-12 mx-auto">
+                    <h3>Neural Network</h3>
+                    <br>
+                    <div class="dropdown show">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Models 
+                        </a>
+                      
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item" href="#summery">Models Summery</a>
+                          <a class="dropdown-item" href="#TreeForest">Tree and Forest</a>
+                          <a class="dropdown-item" href="#PCA">Principal component analysis (PCA)s</a>
+                          <a class="dropdown-item" href="#NN">Neural Network</a>
+                          
+                        </div>
+                      </div>
+                      <br>
+                      <br>
+                    <div id="banner" style="overflow: hidden; display: flex; justify-content:space-around;">
+                      <div class="inline-block">
+                          <img src ="Image/Neural_Network.png">
+                      </div>
+          
+                      
+                  </div>
+                  <hr>
+                  <p class="lead">Explanation: 4 methods were performed in neural network. Light color represents LOSS and corresponding dark one represents ACCURACY in each method. 
+                    From the figure shown, method, Tahn, achieves its highest accuracy in fateset way. However, all methods finally achieves similar loss and accuracy after 
+                    training process. The accuracy of Sigmoid is numerically highest, 0.979.  </p>
+                  <p class="lead">Code: <a href="https://github.com/Mikelaifu/Breast_Cancer_ML_Project/blob/master/Final_Project/Neural%20Network/NeuralNetwork.ipynb">Neural Network</a></p>
+                    
+                </div>
+              </div>
+            </section>
+           
+
+    <section id="predict">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 mx-auto">
+            <h2>Prediction</h2>
+            <p class="lead"></p>
+
+            <br>
+            <br>
+            <div id="banner" style="overflow: hidden; display: flex; justify-content:space-around;">
+              <div class="inline-block">
+                  <img src ="Image/Benign.png">
+              </div>
+          
+              <div class="inline-block">
+                  <img src ="Image/Malignant.png">
+              </div>
+              
+          </div>
+          <br>
+          <br>
+          <div id="banner" style="overflow: hidden; display: flex; justify-content:space-around;">
+              <div class="inline-block">
+                  <img src ="Image/Resultcounts.png">
+              </div>
+              
+          </div>
+          <hr>
+          <br>
+          <p class="lead">Explanation: After implementing Support Vector Machine model and modifying the parameters, these two scattered chart visualizes respective 
+            confident value of each benign(predicted results ranging from 0 to 8) and malignant(predicted results ranging from -17.5 to 0) result. 
+            Every dot in the chart represents an individual predicted benign(marked in green)/ malignant(marked in red) case. After implementing Support Vector 
+            Machine model and modifying the parameters, this chart visualizes the prediction of benign and malignant counts. The red block represents predicted 
+            results of total benign counts (91) and the green block represents predicted result of total malignant counts (51).
+                 
+
+        </p>
+          <p class="lead">Code: <a href="https://github.com/Mikelaifu/Breast_Cancer_ML_Project/blob/master/Final_Project/Prediction/Prediction.ipynb">Predictions</a></p>
+
+          <div id="banner" style="overflow: hidden; display: flex; justify-content:space-around;">
+              <div class="inline-block">
+                  <img src ="Image/ConfusionMatrix.png">
+              </div>
+              
+          </div>
+          <hr>
+          <br>
+          <p class="lead">Explanation: Based on our results and presentation above, we received the highest accuracy by SVM so confusion matrix figure 
+            was generated accordingly. This confusion matrix figure further explains model accuracy. X-axis represents predication results and Y-axis is 
+            actual diagnosis. Accuracy is 0.98 ([62+105]/ [62+105+2+2]), Precision is 0.97(62/[62+2]), False Positive rate is 0.02 (2/[2+105]), and False 
+            Negative rate is 0.03 (2/[62+2]). 
+
+
+
+            </p>
+          <p class="lead">Code: <a href="Breast_Cancer_ML_Project/Final_Project/ConfusionMatrix/Confusion_Matrix.ipynb">Predictions&ConfusionMatric</a></p>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+
+  </body>
+
+</html>
