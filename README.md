@@ -15,6 +15,6 @@ Digital Lab applied 6 machine learning models to predict breast cancer and here 
 * Team: Irene, Cong, Boren, Mike
 * Technology: Python Keras, scikit-learn, Pandas, Matplotlib | Javascript, HTML, CSS, Bootstrap
 
-### Preview:Prev
+### Preview:
 
 ![alt text](Preview.png)
